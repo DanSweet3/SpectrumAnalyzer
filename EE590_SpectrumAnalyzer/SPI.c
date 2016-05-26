@@ -1,10 +1,27 @@
-//
-//  SPI.c
-//  EE590_SpectrumAnalyzer
-//
-//  Created by Daniel Sweet on 5/20/16.
-//  Copyright © 2016 Daniel Sweet. All rights reserved.
-//
+/*******************************************************************************
+ * SPI.c
+ * Spectrum Analyzer EE590 Final Project
+ *
+ * Version: v1.0
+ *
+ * Description: This file implements the SPI processing for the Raspberry Pi 
+ *      Spectrum Analyzer project. The bcm2835.h SPI library implementation is 
+ *      used.
+ *
+ *      This process collects data via SPI from the external PSoC 5 ADC by 
+ *      polling the DATA_READY GPIO. Whenever the DATA_READY line is high, new
+ *      ADC samples are in the PSoC 5 buffer and are ready to be collected. 
+ *
+ *      This process can enable/disable ADC data collection via the ADC_ENABLE
+ *      GPIO. 
+ *
+ *      A total of FFT_LEN bytes (defined in main.h) control how many bytes this 
+ *      process collects before sending the block of data to the FFT process.
+ *
+ * Created by Daniel Sweet on 5/20/16.
+ * Copyright © 2016 Daniel Sweet. All rights reserved.
+ *
+ ******************************************************************************/
 
 #include "SPI.h"
 

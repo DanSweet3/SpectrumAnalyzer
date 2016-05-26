@@ -4,8 +4,9 @@
  *
  * Version: v1.0
  *
- * Description: This file implements the FFT processing for the Raspberry Pi.
- *      The FFT processing is done using v3 of the fftw library (fftw3.h). 
+ * Description: This file implements the FFT processing for the Raspberry Pi
+ *      Spectrum analyzer project. The FFT processing is done using v3 of the 
+ *      fftw library (fftw3.h).
  *
  *      This process receives a data block from the SPI process defined by
  *      FFT_LEN in main.h. It performs a 1D real FFT operation on this data and 
