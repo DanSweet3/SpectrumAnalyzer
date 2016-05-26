@@ -2,13 +2,34 @@
  *  main.c
  * Spectrum Analyzer EE590 Final Project
  *
- * Version: v0.1
+ * Version: v1.1
  *
- * Description: Configures the SPI and sends NUM_BYTES of data repeatedly.
- *  This program is intended to be used with the SPI in loopback mode,
- *  where MOSI and MISO are shorted.
+ * Description: This project implements a Spectrum Analyzer on Raspberry Pi.
  *
- * Also computes CPU time, total time, % CPU usage and average SPI data rate
+ *  The project interfaces with an external ADC via SPI. The ADC that is used
+ *  in this project is a PSoC 5 MCU with an onboard Del-Sig ADC. The Pi is the 
+ *  SPI master and the PSoC is the slave. Two additional flow control GPIO are 
+ *  connected between the two devices: an enable GPIO from Pi to PSoC, to
+ *  start ADC samples and a data ready GPIO from the PSoC to the Pi, to indicate
+ *  when ADC data samples are available.
+ * 
+ * This main file manages four main processes in this project:
+ *      1. SPI Process - Collects data from the external ADC via SPI.
+ *      2. FFT Process - Performs FFT operation on each block of collected data
+ *      3. Display Process - Plots FFT output on HDMI using OpenVG.
+ *      4. Input Process - Parent process that waits for user input to end program.
+ *
+ * GPIO Connections
+ *      NAME            -       PI PIN       -       DESTINATION
+ *      SPI_CLK         -
+ *      SPI_MOSI        -
+ *      SPI_MISO        -
+ *      SPI_CS          -
+ *      ADC_ENABLE      -       GPIO27
+ *      DATA_READY      -       GPIO22
+ *      FFT_ACTIVE      -       GPIO26
+ *      DISPLAY_ACTIVE  -       GPIO19
+ *
  *
  * Created by Daniel Sweet on 4/21/16.
  * Copyright © 2016 Daniel Sweet. All rights reserved.
