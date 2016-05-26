@@ -1,27 +1,20 @@
-//
-//  Display.c
-//  EE590_SpectrumAnalyzer
-//
-//  Created by Daniel Sweet on 5/16/16.
-//  Copyright © 2016 Daniel Sweet. All rights reserved.
-//
-
-
-
 /*******************************************************************************
  *  Display.c
- * OpenVG Test
+ * OpenVG Display Process - Spectrum Analyzer EE590 Final Project
  *
- * Version: v0.1
+ * Version: v1.1
  *
- * Description: Program to test the capabilities of the OpenVG library. This
- *  program draws a bar graph to emulate what an FFT graph might look like.
+ * Description: This file implements the graphing portion of the Raspberry Pi
+ *      Spectrum Analyzer using the OpenVG library. The output of the FFT
+ *      process is passed to this process for scaling and display. The default 
+ *      display for this module is the direct HDMI output display buffer but 
+ *      should be easily adapted to a standalone screen connected to the display
+ *      connector.
  *
- * Simulated FFT data provided in DummyData.c/.h. This is random data generated
- *  in MATLAB.
- *
- * Also computes CPU time, total time, % CPU usage and provides GPIO debug
- *  outputs for profiling.
+ *      This process waits for data produced by the FFT process. The display 
+ *      update rate is controlled by DISPLAY_UPDATE_RATE in Display.h. Samples 
+ *      are averaged using a simple IIR filter to reduce noise and not lose data
+ *      from intermediate (undisplayed) outputs.
  *
  * Created by Daniel Sweet on 4/21/16.
  * Copyright © 2016 Daniel Sweet. All rights reserved.
