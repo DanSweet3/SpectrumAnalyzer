@@ -18,7 +18,7 @@
  ******************************************************************************/
 
 #include "FFT.h"
-//#include "fft_data3.h"
+//#include "fft_data3.h"                    // This is test data, no longer used
 
 //Variables
 double in[FFT_LEN];

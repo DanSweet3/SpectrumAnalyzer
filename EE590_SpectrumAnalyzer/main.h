@@ -1,10 +1,17 @@
-//
-//  main.h
-//  EE590_SpectrumAnalyzer
-//
-//  Created by Daniel Sweet on 5/16/16.
-//  Copyright © 2016 Daniel Sweet. All rights reserved.
-//
+/*******************************************************************************
+ * main.h
+ * Spectrum Analyzer EE590 Final Project
+ *
+ * Version: v1.0
+ *
+ * Description: This is the main header file for the Raspberry Pi Spectrum 
+ *      Analyzer project. Most critical system parameters for sample rate, 
+ *      debug options, FFT configuration and GPIO pinout are defined here.
+ *
+ * Created by Daniel Sweet on 5/16/16.
+ * Copyright © 2016 Daniel Sweet. All rights reserved.
+ *
+ ******************************************************************************/
 
 #ifndef main_h
 #define main_h

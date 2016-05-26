@@ -1,10 +1,16 @@
-//
-//  FFT.h
-//  EE590_SpectrumAnalyzer
-//
-//  Created by Daniel Sweet on 5/21/16.
-//  Copyright © 2016 Daniel Sweet. All rights reserved.
-//
+/*******************************************************************************
+ * FFT.h
+ * Spectrum Analyzer EE590 Final Project
+ *
+ * Version: v1.0
+ *
+ * Description: Header file for FFT process in the Raspberry Pi Spectrum
+ *      Analyzer project. 
+ *
+ * Created by Daniel Sweet on 5/16/16.
+ * Copyright © 2016 Daniel Sweet. All rights reserved.
+ *
+ ******************************************************************************/
 
 #ifndef FFT_h
 #define FFT_h

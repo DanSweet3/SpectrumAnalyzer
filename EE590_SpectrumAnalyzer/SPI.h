@@ -1,10 +1,16 @@
-//
-//  SPI.h
-//  EE590_SpectrumAnalyzer
-//
-//  Created by Daniel Sweet on 5/20/16.
-//  Copyright © 2016 Daniel Sweet. All rights reserved.
-//
+/*******************************************************************************
+ * SPI.h
+ * Spectrum Analyzer EE590 Final Project
+ *
+ * Version: v1.0
+ *
+ * Description: Header file for SPI process in the Raspberry Pi Spectrum
+ *      Analyzer project.
+ *
+ * Created by Daniel Sweet on 5/20/16.
+ * Copyright © 2016 Daniel Sweet. All rights reserved.
+ *
+ ******************************************************************************/
 
 #ifndef SPI_h
 #define SPI_h

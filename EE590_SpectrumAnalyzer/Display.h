@@ -1,10 +1,16 @@
-//
-//  Display.h
-//  EE590_SpectrumAnalyzer
-//
-//  Created by Daniel Sweet on 5/16/16.
-//  Copyright © 2016 Daniel Sweet. All rights reserved.
-//
+/*******************************************************************************
+ * Display.h
+ * Spectrum Analyzer EE590 Final Project
+ *
+ * Version: v1.0
+ *
+ * Description: Header file for the Display process in the Raspberry Pi Spectrum
+ *      Analyzer project.
+ *
+ * Created by Daniel Sweet on 5/16/16.
+ * Copyright © 2016 Daniel Sweet. All rights reserved.
+ *
+ ******************************************************************************/
 
 #ifndef Display_h
 #define Display_h
