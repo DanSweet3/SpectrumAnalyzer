@@ -49,7 +49,7 @@ double fft_cpu_utilization = 0.0;
  ******************************************************************************/
 fftw_plan FFT_Init(void)
 {
-    /////// FFT TEST /////
+    /////// FFT Statistics /////
     printf("-- FFT Process(%d): Running FFT... \n", pid);
     printf("Sample Frequency: %d Hz\n", SAMPLE_FREQ);
     printf("FFT Length: %d bins\n", FFT_LEN);
