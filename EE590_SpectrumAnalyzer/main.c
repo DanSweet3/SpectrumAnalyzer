@@ -20,15 +20,17 @@
  *      4. Input Process - Parent process that waits for user input to end program.
  *
  * GPIO Connections
- *      NAME            -       PI PIN       -       DESTINATION
- *      SPI_CLK         -
- *      SPI_MOSI        -
- *      SPI_MISO        -
- *      SPI_CS          -
- *      ADC_ENABLE      -       GPIO27
- *      DATA_READY      -       GPIO22
- *      FFT_ACTIVE      -       GPIO26
- *      DISPLAY_ACTIVE  -       GPIO19
+ *      NAME            -       PI PIN      -        DESTINATION
+ *      SPI_CLK         -       GPIO14      -           P3[2]
+ *      SPI_MOSI        -       GPIO12      -           P3[1]
+ *      SPI_MISO        -       GPIO13      -           P3[0]
+ *      SPI_CS          -       GPIO10      -           N/C
+ *      ADC_ENABLE      -       GPIO27      -           P0[7]
+ *      DATA_READY      -       GPIO22      -           P3[3]
+ *      FFT_ACTIVE      -       GPIO26      -           N/A (DEBUG)
+ *      DISPLAY_ACTIVE  -       GPIO19      -           N/A (DEBUG)
+ *      ANALOG_IN       -       N/A         -           P0[2]
+ *      VREF(1.024V)    -       N/A         -           P0[0]
  *
  *
  * Created by Daniel Sweet on 4/21/16.
